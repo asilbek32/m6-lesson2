@@ -1,0 +1,12 @@
+.scrol_hidden{
+    overflow: auto;
+    scrollbar-width: none;         /* Firefox uchun */
+    -ms-overflow-style: none;
+  }
+
+  @media(max-width: 389px) {
+    .class_grid{
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  }
