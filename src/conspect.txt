@@ -58,3 +58,27 @@ function NameList() {
  );
 }
 export default NameList;
+
+Conditional Rendring
+Bu if, &&, va ?: operatorlari Reactda turli holatlarda komponentlarni ko’rsatish yoki yaratish uchun ishlatiladi.
+If SHarti bilan rendring
+If oferatori biolan render qilishda komponeneting ichida yoki undan tashqarida ishlatish mumkin. 
+Function MyCom({isLogin}){
+if(isLogin) {
+return <h1> Welcome, User!</h1>
+}else{
+return <h1> Plase , Login!</h1>
+}
+}
+Shart rtue bulsa Welcome, User! Bu chiqadiaks holada plese login
+
+// inlineStyle
+Reatda inline style yozish 
+
+Function App () {
+return {
+<div>
+<h1 style={{color: “red”}} hello Style!</h1>
+</div>
+} 
+}
