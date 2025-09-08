@@ -1,0 +1,60 @@
+//props
+Bu Componentlarga parameter berish uchun ishlatiladi. Componenetga props berish uchun avval
+rootga boglanga asosiy fayilga boglash kerak. Asossiy fayilga chaqirilgan componenetga (props)
+atribute sifatida beriladi hamda obyek kurinishida malumotlarni berish kerak (title=”jdnhsfhui”) hamda
+props obyect malumot qaytaradi.atribute qiymat sifatida tutli xil turdagi malumot berish mumkin
+obyekt funcshin.
+
+//children
+BU bir component boshqa componetlar va elemetlar uchun ote element sifatida ishlatish uchun
+ishlatiladi. Har doim children so’zi bilan yoziladi va doim destraction qilib olinadi.
+export const Post = ({ children }) => {
+return (
+<section>
+...
+<div>{children}</div>
+...
+</section>
+);
+};
+
+//HOOK
+Hookni function ichida ishlatib yoki chaqirib bo’lmaydi
+Hoohni ichida ishlatish mumkin
+Hooh use so’zi bilan boshlanadi
+// useState
+bu React Hook bo‘lib, u funksional komponentlarda state (holat) bilan ishlash imkonini beradi. Ya’ni,
+agar komponent ichida ma’lumotni saqlash va uni yangilash da foydalaniladi
+import React, { useState } from 'react';
+function Counter() {
+ const [count, setCount] = useState(0); // boshlang‘ich qiymat 0
+ const increase = () => {
+ setCount(count + 1);
+ };
+ return (
+ <div>
+ <h2>Hisoblagich: {count}</h2>
+ <button onClick={increase}>+1</button>
+ </div>
+ );
+}export default Counter;
+
+Mapping
+React-da map() funksiyasi juda ko‘p ishlatiladi, ayniqsa ro‘yxat (array) ichidagi ma’lumotlarni
+ekranga chiqarishda. Bu — massivdagi har bir element uchun alohida JSX element hosil qilishga
+imkon beradi.
+import React from 'react';
+function NameList() {
+ const names = ['Ali', 'Vali', 'Gulbahor'];
+ return (
+ <div>
+ <h2>Ismlar ro‘yxati:</h2>
+ <ul>
+ {names.map((name, index) => (
+ <li key={index}>{name}</li>
+ ))}
+ </ul>
+ </div>
+ );
+}
+export default NameList;
